@@ -50,7 +50,7 @@ END
 ```
 # Output
 
-<img width="1400" height="700" alt="2" src="https://github.com/user-attachments/assets/d934eafc-8a79-48f2-983b-6b81746d90ff" />
+<img width="800" height="1500" alt="2" src="https://github.com/user-attachments/assets/af50b544-be1c-4b82-b5d6-8a3d25757b4e" />
 
 # Result
 The LED connected to Port 0.5 blinks continuously with an ON time of 250 ms and OFF time of 250 ms, successfully demonstrating delay generation using Timer 1 in Mode 1.
