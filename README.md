@@ -3,7 +3,7 @@
 # Aim:
 To write and execute an assembly language program to generate a 250 ms delay using Timer 1 in Mode 1 and use it to continuously blink an LED connected to Port pin P0.5 of the 8051 microcontroller.
 # Apparatus / Software Required:
-Keil µVision IDE
++Keil µVision IDE
 # Algorithm:
 +Start the program and initialize Timer 1 in Mode 1 (16-bit timer mode) using the TMOD register.
 
@@ -50,7 +50,7 @@ END
 ```
 # Output
 
-<img width="800" height="1500" alt="2" src="https://github.com/user-attachments/assets/af50b544-be1c-4b82-b5d6-8a3d25757b4e" />
+<img width="700" height="1500" alt="2" src="https://github.com/user-attachments/assets/af50b544-be1c-4b82-b5d6-8a3d25757b4e" />
 
 # Result
 The LED connected to Port 0.5 blinks continuously with an ON time of 250 ms and OFF time of 250 ms, successfully demonstrating delay generation using Timer 1 in Mode 1.
