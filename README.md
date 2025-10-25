@@ -1,27 +1,33 @@
 # Skill_assesment-2
-# Assembly language program in 8051 to generate a 250 ms delay using Timer 1 (Mode 1) and blink an LED connected to Port 0.5 continuously.
-# Aim:
-To write and execute an assembly language program to generate a 250 ms delay using Timer 1 in Mode 1 and use it to continuously blink an LED connected to Port pin P0.5 of the 8051 microcontroller.
+# 8051 Microcontroller: Generate 500 µs Delay Using Timer 0 in Mode 2 and Toggle P1.3
+## Aim:
+To generate a 500 µs delay using Timer 0 in Mode 2 (8-bit auto-reload) on the 8051 microcontroller and toggle the output on Port 1.3, producing a square wave.
 # Apparatus / Software Required:
 +Keil µVision IDE
 # Algorithm:
-+Start the program and initialize Timer 1 in Mode 1 (16-bit timer mode) using the TMOD register.
+1.Start the program 
 
-+Configure Port 0.5 as output pin for the LED.
+2.Configure Timer 0 in Mode 2:
 
-+Turn LED ON by setting P0.5 = 1 (active low connection assumed).
+      Mode 2 is 8-bit auto-reload.
 
-+Call the delay subroutine to generate a 250 ms delay.
+      Load TH0 with the value CEH for 500 µs delay.
 
-+Turn LED OFF by clearing P0.5 = 0.
+3.Load TL0 for initial count with the same value as TH0.
 
-+Call the delay again for the same duration.
+4.Start Timer 0 by setting TR0.
 
-+Repeat the ON–OFF cycle continuously to make the LED blink.
+     Monitor Timer Overflow (TF0):
 
-+The delay subroutine uses Timer 1 with values TH1 = 3CH and TL1 = 0B0H, generating about 50 ms delay per overflow.
+     Wait until TF0 becomes high.
 
-+The delay is repeated 5 times (5 × 50 ms = 250 ms).
+5.Clear TF0 after overflow.
+
+6.Toggle P1.3 after each timer overflow using CPL P1.3.
+
+7.Repeat the process indefinitely to generate a continuous square wave.
+
+
 # Program
 ```asm
 ORG 0000H                    ; Program start address
