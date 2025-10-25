@@ -9,17 +9,17 @@ To generate a 500 µs delay using Timer 0 in Mode 2 (8-bit auto-reload) on the 8
 
 2.Configure Timer 0 in Mode 2:
 
-      Mode 2 is 8-bit auto-reload.
+  Mode 2 is 8-bit auto-reload.
 
-      Load TH0 with the value CEH for 500 µs delay.
+  Load TH0 with the value CEH for 500 µs delay.
 
 3.Load TL0 for initial count with the same value as TH0.
 
 4.Start Timer 0 by setting TR0.
 
-     Monitor Timer Overflow (TF0):
+  Monitor Timer Overflow (TF0):
 
-     Wait until TF0 becomes high.
+  Wait until TF0 becomes high.
 
 5.Clear TF0 after overflow.
 
